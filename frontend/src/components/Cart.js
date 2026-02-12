@@ -2,11 +2,42 @@ import { Fragment } from "react/jsx-runtime";
 import {Link} from "react-router-dom";
 
 export default function Cart({cartItems, setCartItems}) {
+
+        function increaseqty(item){
+            if(item.product.stock == item.qty)return;
+            const updatedItems = cartItems.map((i)=>{
+                if(i.pruduct._id === item.product._id){
+                    i.qty++;
+                }
+                return i;
+            })
+            setCartItems(updatedItems);
+        }
+        function decreaseqty(item){
+            if(item.qty == 1)return;
+                const updatedItems = cartItems.map((i)=>{
+                    if(i.product._id === item.product._id){
+                        i.qty--;
+                    }
+                    return i;
+                })
+                setCartItems(updatedItems);
+        }
+        function deleteitem(item){
+            const updatedItems = cartItems.filter((i)=>{
+                if(i.product._id !== item.product._id){
+                    return true;
+                }
+            })
+            setCartItems(updatedItems);
+        }
+
     return <div className="container container-fluid">
         <h2 className="mt-5">Your Cart: <b>{cartItems.length} items</b></h2>
         
             <div className="row d-flex justify-content-between">
                 <div className="col-12 col-lg-8">
+                    <hr/>
                     {cartItems.map((item)=>
                     <Fragment>
                         <div className="cart-item">
@@ -26,15 +57,15 @@ export default function Cart({cartItems, setCartItems}) {
 
                             <div className="col-4 col-lg-3 mt-4 mt-lg-0">
                                 <div className="stockCounter d-inline">
-                                    <span className="btn btn-danger minus">-</span>
+                                    <span className="btn btn-danger minus" onClick={()=>decreaseqty(item)}>-</span>
                                     <input type="number" className="form-control count d-inline" value={item.qty} readOnly/>
 
-                                    <span className="btn btn-primary plus">+</span>
+                                    <span className="btn btn-primary plus" onClick={()=>increaseqty(item)}>+</span>
                                 </div>
                             </div>
 
                             <div className="col-4 col-lg-1 mt-4 mt-lg-0">
-                                <i id="delete_cart_item" className="fa fa-trash btn btn-danger"></i>
+                                <i id="delete_cart_item" className="fa fa-trash btn btn-danger" onClick={()=>deleteitem(item)}></i>
                             </div>
 
                         </div>
