@@ -1,8 +1,10 @@
 import { Fragment } from "react/jsx-runtime";
 import {Link} from "react-router-dom";
+import {toast} from "react-toastify";
+import { useState } from "react";
 
 export default function Cart({cartItems, setCartItems}) {
-
+        const [complete, setComplete] = useState(false);
         function increaseqty(item){
             if(item.product.stock == item.qty)return;
             const updatedItems = cartItems.map((i)=>{
@@ -30,6 +32,19 @@ export default function Cart({cartItems, setCartItems}) {
                 }
             })
             setCartItems(updatedItems);
+        }
+
+        function placeOrderHandler(){
+            fetch(process.env.REACT_APP_API_URL+'/orders',{
+                method: 'POST',
+                headers:{'Content-Type': 'application/json'},
+                body: JSON.stringify(cartItems)
+            })
+            .then(()=>{
+                setCartItems([]);
+                setComplete(true);
+                toast.success("Order Placed Successfully");
+            })
         }
 
     return cartItems.length > 0 ? <Fragment><div className="container container-fluid">
@@ -73,7 +88,6 @@ export default function Cart({cartItems, setCartItems}) {
                     </Fragment>
                     )}                  
                 </div>
-
                 <div className="col-12 col-lg-3 my-4">
                     <div id="order_summary">
                         <h4>Order Summary</h4>
@@ -82,10 +96,12 @@ export default function Cart({cartItems, setCartItems}) {
                         <p>Est. total: <span className="order-summary-values">${cartItems.reduce((acc, item)=> (acc + item.product.price *item.qty), 0)}</span></p>
         
                         <hr />
-                        <button id="checkout_btn" className="btn btn-primary btn-block">Place Order</button>
+                        <button id="checkout_btn" onClick={placeOrderHandler} className="btn btn-primary btn-block">Place Order</button>
                     </div>
                 </div>
             </div>
         </div>
-        </Fragment>: <h2 className="mt-5">Your Cart is Empty!</h2>
+        </Fragment>: (!complete ? <h2 className="mt-5">Your Cart is Empty!</h2> : <Fragment>
+            <h2 className="mt-5">Order Placed Successfully!</h2>
+        </Fragment>)
 }
