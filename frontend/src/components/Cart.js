@@ -6,7 +6,7 @@ export default function Cart({cartItems, setCartItems}) {
         function increaseqty(item){
             if(item.product.stock == item.qty)return;
             const updatedItems = cartItems.map((i)=>{
-                if(i.pruduct._id === item.product._id){
+                if(i.product._id == item.product._id){
                     i.qty++;
                 }
                 return i;
@@ -16,7 +16,7 @@ export default function Cart({cartItems, setCartItems}) {
         function decreaseqty(item){
             if(item.qty == 1)return;
                 const updatedItems = cartItems.map((i)=>{
-                    if(i.product._id === item.product._id){
+                    if(i.product._id == item.product._id){
                         i.qty--;
                     }
                     return i;
@@ -32,7 +32,7 @@ export default function Cart({cartItems, setCartItems}) {
             setCartItems(updatedItems);
         }
 
-    return <div className="container container-fluid">
+    return cartItems.length > 0 ? <Fragment><div className="container container-fluid">
         <h2 className="mt-5">Your Cart: <b>{cartItems.length} items</b></h2>
         
             <div className="row d-flex justify-content-between">
@@ -78,8 +78,8 @@ export default function Cart({cartItems, setCartItems}) {
                     <div id="order_summary">
                         <h4>Order Summary</h4>
                         <hr />
-                        <p>Subtotal:  <span className="order-summary-values">1 (Units)</span></p>
-                        <p>Est. total: <span className="order-summary-values">$245.67</span></p>
+                        <p>Subtotal:  <span className="order-summary-values">{cartItems.reduce((acc, item)=> (acc + item.qty), 0)} (Units)</span></p>
+                        <p>Est. total: <span className="order-summary-values">${cartItems.reduce((acc, item)=> (acc + item.product.price *item.qty), 0)}</span></p>
         
                         <hr />
                         <button id="checkout_btn" className="btn btn-primary btn-block">Place Order</button>
@@ -87,4 +87,5 @@ export default function Cart({cartItems, setCartItems}) {
                 </div>
             </div>
         </div>
+        </Fragment>: <h2 className="mt-5">Your Cart is Empty!</h2>
 }
