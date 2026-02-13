@@ -41,6 +41,7 @@
 /*mini ecommerce app css*/
 html,
 body {
+  background-color: #acafcc;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   width: 100%;
   height: 100%;
@@ -654,4 +655,79 @@ ul.CTAs a {
 .review_user {
   font-size: 0.8rem;
   color: grey;
+}
+/*adding externam some css*/
+nav a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #febd69;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+#search_field {
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+#search_field:focus {
+  outline: none;
+  border: 3px solid #3cd122;
+  box-shadow: 0 0 10px rgba(4, 5, 4, 0.5);
+}
+/* Entire product card rise on hover */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+/* Button radius */
+.card button {
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+/* Blink effect on click */
+.card button:active {
+  animation: blinkBtn 0.3s ease;
+}
+
+@keyframes blinkBtn {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+/* View Details button smooth transition */
+#view_btn {
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+/* Hover → increase border radius */
+#view_btn:hover {
+  border-radius: 30px;
+}
+
+/* Click → blink effect */
+#view_btn:active {
+  animation: blinkView 0.3s ease;
+}
+
+@keyframes blinkView {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
 }
