@@ -1,101 +1,197 @@
-[{
+[
+  {
     "name": "OPPO F21s Pro 5G",
-    "price": 245.67,
-    "description": "OPPO F21s Pro 5G is a powerful device with a RAM extension feature, that offers brilliant operational speed to users.",
+    "price": 19000,
+    "description": "OPPO F21s Pro 5G offers smooth performance with RAM expansion and a stylish design.",
     "ratings": 4.5,
     "images": [
-      {
-        "image": "/images/products/1.jpg"
-      },
-      {
-        "image": "/images/products/2.jpg"
-      }
+      { "image": "/images/products/1.jpg" },
+      { "image": "/images/products/2.jpg" }
     ],
     "category": "Mobile Phones",
     "seller": "Amazon",
-    "stock": 5
+    "stock": "5"
   },
   {
-    "name": "WRISTIO HD, Bluetooth Calling Smart Watch",
-    "price": 150.32,
-    "description": "Minix watches are exclusively designed to fulfill the advanced tech needs of today’s generation.",
-    "ratings": 3.5,
+    "name": "HP Pavilion 15 Laptop",
+    "price": 54999,
+    "description": "HP Pavilion 15 comes with Intel i5 processor and 16GB RAM for powerful multitasking.",
+    "ratings": 4.4,
     "images": [
-      {
-        "image": "/images/products/2.jpg"
-      }
-    ],
-    "category": "Accessories",
-    "seller": "Flipkart",
-    "stock": 9
-  },
-  {
-    "name": "Dell Inspiron 3511 Laptop",
-    "price": 440.57,
-    "description": "Dell Inspiron 3511 11th Generation Intel Core i5-1135G7 Processor (8MB Cache, up to 4.2 GHz);Operating System: Windows 10 Home Single Language, English",
-    "ratings": 2,
-    "images": [
-      {
-        "image": "/images/products/3.jpg"
-      }
+      { "image": "/images/products/2.jpg" },
+      { "image": "/images/products/4.jpg" }
     ],
     "category": "Laptops",
-    "seller": "Ebay",
-    "stock": 9
+    "seller": "HP Store",
+    "stock": "3"
   },
   {
-    "name": "Lenovo IdeaPad Slim 3 Laptop",
-    "price": 250.45,
-    "description": "Lenovo IdeaPad Slim 311th Gen Intel Core i5-1135G7 | Speed: 2.4 GHz (Base) - 4.2 GHz (Max) | 4 Cores | 8 Threads | 8 MB Cache",
-    "ratings": 4,
+    "name": "Boat Rockerz 450 Headphones",
+    "price": 1499,
+    "description": "Boat Rockerz 450 wireless headphones with deep bass and long battery life.",
+    "ratings": 4.2,
     "images": [
-      {
-        "image": "/images/products/6.jpg"
-      }
-    ],
-    "category": "Laptops",
-    "seller": "Ebay",
-    "stock": 9
-  },
-  {
-    "name": "ASUS VivoBook 15 Laptop",
-    "price": 767.32,
-    "description": "ASUS VivoBook 15 15.6-inch (39.62 cm) HD, Dual Core Intel Celeron N4020, Thin and Light Laptop (4GB RAM/256GB SSD/Integrated Graphics/Windows 11 Home/Transparent Silver/1.8 Kg), X515MA-BR011W",
-    "ratings": 5,
-    "images": [
-      {
-        "image": "/images/products/7.jpg"
-      }
-    ],
-    "category": "Laptops",
-    "seller": "Ebay",
-    "stock": 9
-  },
-  {
-    "name": "PTron Newly Launched Tangent Sports, 60Hrs Playtime",
-    "price": 15.46,
-    "description": "Gigantic 60 + Hours of music playtime on a single charge; BT5.2 Wireless headphones with ENC (Environmental Noise Cancellation) Technology to enhance your voice quality over the voice calls",
-    "ratings": 5,
-    "images": [
-      {
-        "image": "/images/products/4.jpg"
-      }
+      { "image": "/images/products/3.jpg" },
+      { "image": "/images/products/6.jpg" }
     ],
     "category": "Headphones",
-    "seller": "Amazon",
-    "stock": 4
+    "seller": "Flipkart",
+    "stock": "20"
   },
   {
-    "name": "Campus Men's Maxico Running Shoes",
-    "price": 10.12,
-    "description": "The high raised back cover with extra padding.",
-    "ratings": 3,
+    "name": "Nike Air Max Shoes",
+    "price": 6999,
+    "description": "Nike Air Max running shoes designed for comfort and performance.",
+    "ratings": 4.6,
     "images": [
-      {
-        "image": "/images/products/5.jpg"
-      }
+      { "image": "/images/products/4.jpg" },
+      { "image": "/images/products/8.jpg" }
     ],
-    "category": "Sports",
-    "seller": "Ebay",
-    "stock": 6
-  }]
+    "category": "Footwear",
+    "seller": "Nike Store",
+    "stock": "10"
+  },
+  {
+    "name": "Samsung 55-inch 4K Smart TV",
+    "price": 47999,
+    "description": "Samsung 55-inch Ultra HD Smart TV with HDR and built-in streaming apps.",
+    "ratings": 4.7,
+    "images": [
+      { "image": "/images/products/5.jpg" },
+      { "image": "/images/products/10.jpg" }
+    ],
+    "category": "Televisions",
+    "seller": "Amazon",
+    "stock": "4"
+  },
+  {
+    "name": "Apple Watch Series 8",
+    "price": 39999,
+    "description": "Apple Watch Series 8 with advanced health tracking and sleek design.",
+    "ratings": 4.8,
+    "images": [
+      { "image": "/images/products/6.jpg" },
+      { "image": "/images/products/12.jpg" }
+    ],
+    "category": "Watches",
+    "seller": "Apple Store",
+    "stock": "6"
+  },
+  {
+    "name": "Levi's Men's Slim Fit Jeans",
+    "price": 2499,
+    "description": "Levi's slim fit stretchable jeans for everyday comfort and style.",
+    "ratings": 4.3,
+    "images": [
+      { "image": "/images/products/7.jpg" },
+      { "image": "/images/products/14.jpg" }
+    ],
+    "category": "Clothing",
+    "seller": "Levi's",
+    "stock": "15"
+  },
+  {
+    "name": "Canon EOS 1500D DSLR Camera",
+    "price": 38999,
+    "description": "Canon EOS 1500D DSLR with 24.1MP sensor and Full HD video recording.",
+    "ratings": 4.6,
+    "images": [
+      { "image": "/images/products/8.jpg" },
+      { "image": "/images/products/16.jpg" }
+    ],
+    "category": "Cameras",
+    "seller": "Canon Store",
+    "stock": "3"
+  },
+  {
+    "name": "Dell 24-inch Monitor",
+    "price": 12999,
+    "description": "Dell 24-inch Full HD monitor with ultra-thin bezels and IPS panel.",
+    "ratings": 4.4,
+    "images": [
+      { "image": "/images/products/9.jpg" },
+      { "image": "/images/products/18.jpg" }
+    ],
+    "category": "Accessories",
+    "seller": "Dell Store",
+    "stock": "7"
+  },
+  {
+    "name": "Adidas Sports T-Shirt",
+    "price": 1299,
+    "description": "Adidas lightweight sports t-shirt with moisture-wicking fabric.",
+    "ratings": 4.2,
+    "images": [
+      { "image": "/images/products/10.jpg" },
+      { "image": "/images/products/20.jpg" }
+    ],
+    "category": "Clothing",
+    "seller": "Adidas",
+    "stock": "18"
+  },
+  {
+    "name": "Sony PlayStation 5",
+    "price": 49999,
+    "description": "Sony PS5 gaming console with ultra-high-speed SSD and 4K gaming.",
+    "ratings": 4.9,
+    "images": [
+      { "image": "/images/products/11.jpg" },
+      { "image": "/images/products/22.jpg" }
+    ],
+    "category": "Gaming",
+    "seller": "Sony Store",
+    "stock": "2"
+  },
+  {
+    "name": "Mi 10000mAh Power Bank",
+    "price": 999,
+    "description": "Mi power bank with dual USB output and fast charging support.",
+    "ratings": 4.3,
+    "images": [
+      { "image": "/images/products/12.jpg" },
+      { "image": "/images/products/24.jpg" }
+    ],
+    "category": "Accessories",
+    "seller": "Amazon",
+    "stock": "25"
+  },
+  {
+    "name": "KitchenAid Mixer Grinder",
+    "price": 5499,
+    "description": "Powerful mixer grinder for daily kitchen needs with durable blades.",
+    "ratings": 4.1,
+    "images": [
+      { "image": "/images/products/13.jpg" },
+      { "image": "/images/products/26.jpg" }
+    ],
+    "category": "Home Appliances",
+    "seller": "Flipkart",
+    "stock": "6"
+  },
+  {
+    "name": "Puma Running Shoes",
+    "price": 4599,
+    "description": "Puma lightweight running shoes with breathable mesh upper.",
+    "ratings": 4.4,
+    "images": [
+      { "image": "/images/products/14.jpg" },
+      { "image": "/images/products/28.jpg" }
+    ],
+    "category": "Footwear",
+    "seller": "Puma Store",
+    "stock": "12"
+  },
+  {
+    "name": "Wooden Study Table",
+    "price": 8999,
+    "description": "Modern wooden study table with storage drawers and smooth finish.",
+    "ratings": 4.2,
+    "images": [
+      { "image": "/images/products/15.jpg" },
+      { "image": "/images/products/30.jpg" }
+    ],
+    "category": "Furniture",
+    "seller": "IKEA",
+    "stock": "4"
+  }
+]
