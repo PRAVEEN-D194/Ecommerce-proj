@@ -731,3 +731,16 @@ nav a:hover::after {
   50% { opacity: 0.4; }
   100% { opacity: 1; }
 }
+/* Cart page content background */
+.cart-item,
+#order_summary {
+  background-color: #fff8e1; /* light creamy color, change as needed */
+  border-radius: 10px;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Optional: hover effect on cart items */
+.cart-item:hover {
+  background-color: #fff3cd; /* slightly darker on hover */
+}
